@@ -5,7 +5,7 @@ const Post = (props) => {
     return (
 
         <div className={s.item}>
-            <img src='https://cs9.pikabu.ru/post_img/big/2020/03/30/6/1585562132190522557.jpg'></img>
+            <img src='https://cs9.pikabu.ru/post_img/big/2020/03/30/6/1585562132190522557.jpg' alt='ava'></img>
             {props.message}
             <div>
                 <span>Like :{props.count} </span>

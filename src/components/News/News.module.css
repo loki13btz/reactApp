@@ -1,0 +1,13 @@
+.item {
+    color: #DE50C1;
+    font-family: Verdana;
+}
+
+.item b {
+    color: #DE5850;
+}
+
+.item img {
+    width: max-content;
+    height: 350px;
+}
