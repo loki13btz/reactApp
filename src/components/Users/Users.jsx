@@ -20,38 +20,37 @@ let Users = (props) => {
             })}
 
         </div>
-        {
-            props.users.map(u => <div key={u.id}>
-                <span>
-                    <div>
-                        <NavLink to={'/profile/' + u.id}>
-                            <img src={u.photos.small != null ? u.photos.small : imeges} />
-                        </NavLink>
-                    </div>
-                    <div>
-                        {u.followed
-                            ? <button disabled={props.followingInProgress.some(id => id === u.id)} onClick={() => {
-                                props.unfollow(u.id);
+        {props.users.map(u => <div key={u.id}>
+            <span>
+                <div>
+                    <NavLink to={'/profile/' + u.id}>
+                        <img src={u.photos.small != null ? u.photos.small : imeges} />
+                    </NavLink>
+                </div>
+                <div>
+                    {u.followed
+                        ? <button disabled={props.followingInProgress.some(id => id === u.id)} onClick={() => {
+                            props.unfollow(u.id);
 
 
-                            }}>Unfollow</button>
-                            : <button disabled={props.followingInProgress.some(id => id === u.id)} onClick={() => {
-                                props.follow(u.id);
-                            }}>Follow</button>}
+                        }}>Unfollow</button>
+                        : <button disabled={props.followingInProgress.some(id => id === u.id)} onClick={() => {
+                            props.follow(u.id);
+                        }}>Follow</button>}
 
 
-                    </div>
-                </span>
-                <span>
-                    <div>{u.name}</div>
-                    <div>{u.status}</div>
-                </span>
-                <span>
-                    <div>{'u.location.country'}</div>
-                    <div>{'u.location.city'}</div>
-                </span>
+                </div>
+            </span>
+            <span>
+                <div>{u.name}</div>
+                <div>{u.status}</div>
+            </span>
+            <span>
+                <div>{'u.location.country'}</div>
+                <div>{'u.location.city'}</div>
+            </span>
 
-            </div>)
+        </div>)
         }
     </div >)
 }
