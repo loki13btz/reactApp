@@ -12,6 +12,7 @@ let Users = (props) => {
         pages.push(i);
     }
 
+
     return (<div className={s.item}>
         <div>
             {pages.map(p => {
